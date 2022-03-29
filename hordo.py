@@ -7,12 +7,12 @@ def terfogat():
     r = int(mezo1.get())
     m = int(mezo2.get())
     terfogat = round (math.pi * r * r * m )
-    liter=0.001*terfogat
+    liter=round(0.001*terfogat)
     mezo3.delete(0, END)
     mezo3.insert(0, str(liter)+' l')
     borocska= int(mezo4.get())
-    telitett=0
-    telitett= terfogat/borocska 
+    
+    telitett= round(borocska*(100/liter), 2)
     if borocska<=liter:
         mezo3.delete(0, END)
         mezo3.insert(0, str(liter)+' l')
@@ -26,7 +26,7 @@ def terfogat():
         mezo6.delete(0, END)
         mezo6.insert(0, 'A hordó túl kicsi')
 
-
+    
 
 cimke4=Label(foablak, text="Hány liter bor (l):")
 cimke4.grid(row=1, column=1, sticky="e")
