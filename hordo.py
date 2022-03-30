@@ -22,7 +22,7 @@ def terfogat():
         liter=round(0.001*terfogat)
         mezo3.delete(0, END)
         mezo3.insert(0, str(liter)+' l')
-        telitett= round(borocska*(100/liter), 2)
+        telitett= round(borocska*(100/liter))
         
         if borocska<=liter:
             mezo3.delete(0, END)
