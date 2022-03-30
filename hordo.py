@@ -4,11 +4,18 @@ gyoker="H:\\IKT\\python\\"
 import math
 
 def terfogat():
+    if len(mezo1.get())==0 or len(mezo2.get()) or len(mezo4.get()):
+        mezo3.delete(0, END)
+        mezo3.insert(0, 'Nem lehet nulla / negatív szám')
+        mezo5.delete(0, END)
+        mezo5.insert(0, 'Nem lehet nulla / negatív szám')
+        mezo6.delete(0, END)
+        mezo6.insert(0, 'Nem lehet nulla / negatív szám')
+
     r = int(mezo1.get())
     m = int(mezo2.get())
-    
     borocska= int(mezo4.get())
-
+    
     if r<=0 or m<=0 or borocska<=0:
         mezo3.delete(0, END)
         mezo3.insert(0, 'Nem lehet nulla / negatív szám')
