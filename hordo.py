@@ -4,13 +4,13 @@ gyoker="H:\\IKT\\python\\"
 import math
 
 def terfogat():
-    if len(mezo1.get())==0 or len(mezo2.get()) or len(mezo4.get()):
+    if len(mezo1.get())==0 or len(mezo2.get()) or type(mezo4.get() or type(mezo1.get())==0 or type(mezo2.get()) or type(mezo4.get())):
         mezo3.delete(0, END)
-        mezo3.insert(0, 'Nem lehet nulla / negatív szám')
+        mezo3.insert(0, 'Hibás karakter')
         mezo5.delete(0, END)
-        mezo5.insert(0, 'Nem lehet nulla / negatív szám')
+        mezo5.insert(0, 'Hibás karakter')
         mezo6.delete(0, END)
-        mezo6.insert(0, 'Nem lehet nulla / negatív szám')
+        mezo6.insert(0, 'Hibás karakter')
 
     r = int(mezo1.get())
     m = int(mezo2.get())
