@@ -91,5 +91,4 @@ icon = PhotoImage(file=gyoker+"hordo.png")
 foablak.iconphoto(True, icon)
 
 foablak.title("hordós")
-elsokep = PhotoImage(file=gyoker+"csoki.png")
 foablak.mainloop()
