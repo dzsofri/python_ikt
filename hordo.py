@@ -43,15 +43,17 @@ def terfogat():
 
     
 def habaromvagy():
-        if len(mezo1.get())==0 or len(mezo2.get()) or type(mezo4.get() or type(mezo1.get())==0 or type(mezo2.get()) or type(mezo4.get())):
+    try:
+        terfogat()
+
+    except:
             mezo3.delete(0, END)
             mezo3.insert(0, 'Hibás karakter')
             mezo5.delete(0, END)
             mezo5.insert(0, 'Hibás karakter')
             mezo6.delete(0, END)
             mezo6.insert(0, 'Hibás karakter')
-        else:
-            terfogat()
+
 cimke4=Label(foablak, text="Hány liter bor (l):")
 cimke4.grid(row=1, column=1, sticky="e")
 mezo4=Entry(foablak,width=30)
