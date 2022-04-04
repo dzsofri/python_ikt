@@ -87,4 +87,9 @@ cimke6.grid(row=7, column=1, sticky="e")
 mezo6=Entry(foablak, width=30)
 mezo6.grid(row=7, column=2, columnspan=4)
 
+icon = PhotoImage(file=gyoker+"hordo.png")
+foablak.iconphoto(True, icon)
+
+foablak.title("hordós")
+elsokep = PhotoImage(file=gyoker+"csoki.png")
 foablak.mainloop()

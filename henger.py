@@ -51,6 +51,7 @@ mezo5.grid(row=6, column=2, columnspan=4)
 icon = PhotoImage(file=gyoker+"henger.png")
 foablak.iconphoto(True, icon)
 
-foablak.title("HENGER")
+
+
 
 foablak.mainloop()
