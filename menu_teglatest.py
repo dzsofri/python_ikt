@@ -9,7 +9,7 @@ def nevjegy():
     abl2.mainloop()
 #------------------
 
-#FELSZÍN
+#FELSZÍN 01
 
 def felszin():
     
