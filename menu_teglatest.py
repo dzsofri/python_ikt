@@ -1,4 +1,5 @@
 from tkinter import *
+import math
 #nevjegy
 def nevjegy():
     abl2= Toplevel(abl1)
@@ -9,7 +10,7 @@ def nevjegy():
     abl2.mainloop()
 #------------------
 
-#FELSZÍN 01
+#TEGLATEST FELSZÍN 
 
 def felszin():
     
@@ -24,7 +25,7 @@ def felszin():
         else:
             felszin=2*(a*b+a*c+b*c)
             m4.delete(0,END)
-            m4.instert(0,str(felszin))
+            m4.insert(0,str(felszin))
 
     def habaromvagy():
         try:
@@ -39,6 +40,7 @@ def felszin():
     abl3.title("A téglatest felszíne")
     abl3.minsize(width=300, height=100)
     gomb1=Button(abl3, text="Számítás", command=habaromvagy)
+    gomb2=Button(abl3, text="Kilép", command=abl3.destroy)
     sz1=Label(abl3, text="a:")
     sz2=Label(abl3, text="b:")
     sz3=Label(abl3, text="c:")
@@ -48,21 +50,21 @@ def felszin():
     m3= Entry(abl3)
     m4= Entry(abl3, width=30)
 
-    sz1.grid(row=1)
-    sz2.grid(row=2)
-    sz3.grid(row=3)
-    sz4.grid(row=5)
+    sz1.grid(row=1, width=30)
+    sz2.grid(row=2, width=30)
+    sz3.grid(row=3, width=30)
+    sz4.grid(row=5, width=30)
     gomb1.grid(row=4, column=2, sticky=W)
     m1.grid(row=1, column=2, sticky=W)
     m2.grid(row=2, column=2, sticky=W)
     m3.grid(row=3, column=2, sticky=W)
     m4.grid(row=5, column=2, sticky=W)
-    
+    gomb2.grid(row=4, column=2, sticky=E)
     abl3.mainloop()
 #--------------------------
 
 
-#TÉRFOGAT
+#TÉGLATEST TÉRFOGAT
 
 def terfogat():
     def szamit():
@@ -77,7 +79,7 @@ def terfogat():
         else:
             terfogat=a*b*c
             m4.delete(0,END)
-            m4.instert(0,str(terfogat))
+            m4.insert(0,str(terfogat))
 
     def habaromvagy():
             try:
@@ -91,7 +93,7 @@ def terfogat():
     abl3.title("A téglatest terfogata")
     abl3.minsize(width=300, height=100)
     gomb1=Button(abl3, text="Számítás", command=habaromvagy)
-
+    gomb2=Button(abl3, text="Kilép", command=abl3.destroy)
     sz1=Label(abl3, text="a:")
     sz2=Label(abl3, text="b:")
     sz3=Label(abl3, text="c:")
@@ -101,17 +103,111 @@ def terfogat():
     m3= Entry(abl3)
     m4= Entry(abl3, width=30)
 
-    sz1.grid(row=1)
-    sz2.grid(row=2)
-    sz3.grid(row=3)
-    sz4.grid(row=5)
+    sz1.grid(row=1, width=30)
+    sz2.grid(row=2, width=30)
+    sz3.grid(row=3, width=30)
+    sz4.grid(row=5, width=30)
     gomb1.grid(row=4, column=2, sticky=W)
     m1.grid(row=1, column=2, sticky=W)
     m2.grid(row=2, column=2, sticky=W)
     m3.grid(row=3, column=2, sticky=W)
     m4.grid(row=5, column=2, sticky=W)
+    gomb2.grid(row=4, column=2, sticky=E)
     abl3.mainloop() 
 #------------------
+
+#HENGER TÉRFOGAT
+
+def hengerterfogat():
+    def szamit():
+
+        r=eval(m1.get())
+        m=eval(m2.get())
+    
+        if m<=0 or r<=0:
+            m4.delete(0, END)
+            m4.insert(0, 'Nem lehet nulla / negatív szám')
+        else:
+            terfogat =round(math.pi * r * r * m)
+            m4.delete(0,END)
+            m4.insert(0,str(terfogat))
+
+    def habaromvagy():
+            try:
+                szamit()
+
+            except:
+                m4.delete(0, END)
+                m4.insert(0, 'Hibás karakter')
+
+    abl4= Toplevel(abl1)
+    abl4.title("A henger terfogata")
+    abl4.minsize(width=300, height=100)
+    gomb1=Button(abl4, text="Számítás", command=habaromvagy)
+    gomb2=Button(abl4, text="Kilép", command=abl4.destroy)
+    sz1=Label(abl4, text="m:")
+    sz2=Label(abl4, text="r:")
+    sz4=Label(abl4, text="Eredmény:")
+    m1= Entry(abl4, width=30)
+    m2= Entry(abl4, width=30)
+    m4= Entry(abl4, width=30)
+
+    sz1.grid(row=1)
+    sz2.grid(row=2)
+    sz4.grid(row=5)
+    gomb1.grid(row=4, column=2, sticky=W)
+    m1.grid(row=1, column=2, sticky=W)
+    m2.grid(row=2, column=2, sticky=W)
+    m4.grid(row=5, column=2, sticky=W)
+    gomb2.grid(row=4, column=2, sticky=E)
+    abl4.mainloop() 
+#------------------
+
+def hengerfelszin():
+    def szamit():
+
+        r=eval(m1.get())
+        m=eval(m2.get())
+    
+        if m<=0 or r<=0:
+            m4.delete(0, END)
+            m4.insert(0, 'Nem lehet nulla / negatív szám')
+        else:
+            felszin=round(2*r**2*math.pi+2*r*math.pi*m)
+            m4.delete(0,END)
+            m4.insert(0,str(felszin))
+
+    def habaromvagy():
+            try:
+                szamit()
+
+            except:
+                m4.delete(0, END)
+                m4.insert(0, 'Hibás karakter')
+
+    abl4= Toplevel(abl1)
+    abl4.title("A henger felszíne")
+    abl4.minsize(width=300, height=100)
+    gomb1=Button(abl4, text="Számítás", command=habaromvagy)
+    gomb2=Button(abl4, text="Kilép", command=abl4.destroy)
+    sz1=Label(abl4, text="m:")
+    sz2=Label(abl4, text="r:")
+    sz4=Label(abl4, text="Eredmény:")
+    m1= Entry(abl4, width=30)
+    m2= Entry(abl4, width=30)
+    m4= Entry(abl4, width=30)
+
+    sz1.grid(row=1)
+    sz2.grid(row=2)
+    sz4.grid(row=5)
+    gomb1.grid(row=4, column=2, sticky=W)
+    m1.grid(row=1, column=2, sticky=W)
+    m2.grid(row=2, column=2, sticky=W)
+    m4.grid(row=5, column=2, sticky=W)
+    gomb2.grid(row=4, column=2, sticky=E)
+    abl4.mainloop() 
+#------------------
+
 
 abl1=Tk()
 
@@ -134,5 +230,12 @@ teglatest=Menu(menu2)
 teglatest.add_command(label="Felszín", command=felszin, underline=0)
 teglatest.add_command(label="Térfogat", command=terfogat, underline=0)
 menu2.config(menu=teglatest)
+
+menu3=Menubutton(menusor, text="Henger", underline=0)
+menu3.pack(side=LEFT)
+henger=Menu(menu3)
+henger.add_command(label="Felszín", command=hengerfelszin, underline=0)
+henger.add_command(label="Térfogat", command=hengerterfogat, underline=0)
+menu3.config(menu=henger)
 
 abl1.mainloop()
