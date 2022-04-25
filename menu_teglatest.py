@@ -9,9 +9,7 @@ def nevjegy():
     gomb2.pack()
     abl2.mainloop()
 #------------------
-
 #TEGLATEST FELSZÍN 
-
 def felszin():
     
     def szamit():
@@ -33,8 +31,7 @@ def felszin():
 
         except:
             m4.delete(0, END)
-            m4.insert(0, 'Hibás karakter')
-            
+            m4.insert(0, 'Hibás karakter')     
 
     abl3= Toplevel(abl1)
     abl3.title("A téglatest felszíne")
@@ -62,10 +59,7 @@ def felszin():
     gomb2.grid(row=4, column=2, sticky=E)
     abl3.mainloop()
 #--------------------------
-
-
 #TÉGLATEST TÉRFOGAT
-
 def terfogat():
     def szamit():
 
@@ -114,10 +108,8 @@ def terfogat():
     m4.grid(row=5, column=2, sticky=W)
     gomb2.grid(row=4, column=2, sticky=E)
     abl3.mainloop() 
-#------------------
-
+#-----------------
 #HENGER TÉRFOGAT
-
 def hengerterfogat():
     def szamit():
 
@@ -162,7 +154,6 @@ def hengerterfogat():
     gomb2.grid(row=4, column=2, sticky=E)
     abl4.mainloop() 
 #------------------
-
 def hengerfelszin():
     def szamit():
 
@@ -207,7 +198,6 @@ def hengerfelszin():
     gomb2.grid(row=4, column=2, sticky=E)
     abl4.mainloop() 
 #------------------
-
 
 abl1=Tk()
 
